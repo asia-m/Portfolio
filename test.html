@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+    <button id="addBtn" onclick="updateCount(1)">+</button>
+    <button id="subtractBtn" onclick="updateCount(-1)">-</button>
+    <button id="resetBtn" onclick="updateCount()">Reset</button>
+    <h1 id="displayTxt">Count 0</h1>
+
+    <script>
+        // 1. Getting DOM instances 
+        var displayTxt = document.getElementById('displayTxt');
+        var count = 0;
+
+        function updateCount(value) {
+            count = value ? (count + value) : 0;
+            displayTxt.innerHTML = "Count " + count;
+        }
+
+    </script>
+
+</body>
+
+</hmtl>
